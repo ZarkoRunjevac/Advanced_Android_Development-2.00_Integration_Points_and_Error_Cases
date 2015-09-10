@@ -269,14 +269,27 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
         }
     }
 
+<<<<<<< HEAD
+=======
+    /*
+       Updates the empty list view with contextually relevant information that the user can
+       use to determine why they aren't seeing weather.
+    */
+>>>>>>> master
     private void updateEmptyView() {
         if ( mForecastAdapter.getCount() == 0 ) {
             TextView tv = (TextView) getView().findViewById(R.id.empty);
             if ( null != tv ) {
                 // if cursor is empty, why? do we have an invalid location
+<<<<<<< HEAD
                 int message = R.string.empty_forecast_list;
                 if (!Utility.isNetworkAvailable(getActivity()) ) {
                     message = R.string.empty_forecast_list_no_network;
+=======
+                int message = R.string.empty_string;
+                if (!Utility.isConnected(getActivity()) ) {
+                    message = R.string.no_network_string;
+>>>>>>> master
                 }
                 tv.setText(message);
             }
