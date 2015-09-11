@@ -249,7 +249,6 @@ public class Utility {
         return -1;
     }
 
-<<<<<<< HEAD
     static public boolean isNetworkAvailable(Context c) {
         ConnectivityManager cm =
                 (ConnectivityManager)c.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -257,12 +256,6 @@ public class Utility {
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         return activeNetwork != null &&
                 activeNetwork.isConnectedOrConnecting();
-=======
-    public static boolean isConnected(Context conetext){
-
-        ConnectivityManager connectivityManager=(ConnectivityManager)conetext.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
->>>>>>> master
     }
+
 }
